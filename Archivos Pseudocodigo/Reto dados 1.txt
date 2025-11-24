@@ -1,0 +1,15 @@
+Function Main
+    Declare Integer dado
+    Declare String paroimpar
+
+    Assign dado = random (6)+1
+    Output "Lanzando el dado"
+    Output "El numero obtenido es: " & dado
+    If dado % 2 == 0
+        Assign paroimpar = "par"
+        Output "El dado es par"
+    Else
+        Assign paroimpar = "Impar"
+        Output "El dado es impar"
+    End
+End

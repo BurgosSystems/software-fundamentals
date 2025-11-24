@@ -1,0 +1,15 @@
+﻿Function Main
+    Declare Integer n
+    Declare Integer i
+    Declare Integer dado
+    Declare Integer suma
+
+    Output "Ingrese el número de lanzamientos: "
+    Input n
+    Assign suma = 0
+    For i = 1 to n
+        Assign dado = random (6)+1
+        Assign suma = suma + dado
+        Output "El dado "& i &" salio: "& dado
+    End
+End

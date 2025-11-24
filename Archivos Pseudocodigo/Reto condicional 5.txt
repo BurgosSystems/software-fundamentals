@@ -1,0 +1,63 @@
+Function Main
+    ... variable declaration
+    Declare String tiDo
+    Declare String nume
+    Declare String noms
+    Declare String apels
+    Declare String gen
+    Declare Integer aNa
+    Declare String direc
+    Declare String tel
+    Declare Real sala
+    Declare Real nueSala
+    Declare Real inc
+
+    ... data entry into variables
+    Output "Enter document type"
+    Input tiDo
+    Output "Enter ID number"
+    Input nume
+    Output "Enter names"
+    Input noms
+    Output "Enter last names"
+    Input apels
+    Output "Enter gender"
+    Input gen
+    Output "Year of birth"
+    Input aNa
+    Output "Address"
+    Input direc
+    Output "Phone"
+    Input tel
+    Output "Salary"
+    Input sala
+
+    ... variable salary comparison for performing operations
+    If sala>=2000000
+        If gen="female"
+            Assign inc = (sala*3)/100
+            Assign nueSala = sala+inc
+            Output "The salary of  " & noms &"  " & apels &"  is " & nueSala
+        Else
+            Assign inc = (sala*2.5)/100
+            Assign nueSala = sala+inc
+            Output "The salary of  " & noms &"  " & apels &"  is " & nueSala
+        End
+    Else
+        If sala>1200000 || sala> 2000000
+            Assign inc = (sala*5)/100
+            Assign nueSala = sala+inc
+            Output "The salary of  " & noms &"  " & apels &"  is " & nueSala
+        Else
+            If gen = "female"
+                Assign inc = (sala*10)/100
+                Assign nueSala = sala+inc
+                Output "The salary of  " & noms &"  " & apels &"  is " & nueSala
+            Else
+                Assign inc = (sala*8)/100
+                Assign nueSala = sala+inc
+                Output "The salary of  " & noms &"  " & apels &"  is " & nueSala
+            End
+        End
+    End
+End

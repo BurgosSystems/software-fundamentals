@@ -1,0 +1,143 @@
+﻿Function Main
+    Declare String nom
+    Declare String ema
+    Declare Integer num
+    Declare String gen
+    Declare Integer sal
+    Declare Integer aaaa
+    Declare String new
+    Declare String new2
+    Declare String h
+    Declare String res
+    Declare Integer i
+    Declare Integer errorNom
+    Declare Integer errorNum
+    Declare String caracter
+    Declare Integer currentyear
+    Declare Integer age
+
+    Assign aaaa = 0
+    Assign currentyear = 2025
+    Assign age = -1
+    Assign new = "s"
+    Assign gen = "yes"
+    Declare Boolean nombreValido
+    Declare Boolean numValido
+    Declare Integer sumaEmple
+
+    Assign sumaEmple = 0
+    Declare String ch
+    Declare Integer sumaGen
+    Declare Integer genSum
+    Declare Integer tamaño
+    Declare Integer contEmpleados
+    Declare Integer contM
+    Declare Integer contF
+    Declare Integer contO
+    Declare Integer sumaSalarios
+    Declare Integer sumaEdades
+    Declare Integer edad
+    Declare Real promEdades
+    Declare String genControl
+    Declare String nomControl
+
+    Assign contEmpleados = 0
+    Assign contM = 0
+    Assign contF = 0
+    Assign contO = 0
+    Assign sumaSalarios = 0
+    Assign sumaEdades = 0
+    While new = "S" or new = "s"
+        Assign age = -1
+        Output "Porfavor digite su nombre completo"
+        Input nom
+        Output "Ingrese su correo electronico"
+        Input ema
+        Output "Ingrese su numero telefonico"
+        Input num
+        Assign genControl = "yes"
+        While genControl = "yes"
+            Output "Ingrese su genero "
+            Output "Masculino (M/m)"
+            Output "Femenino (F/f)"
+            Output "Otro (O/o)"
+            Input gen
+            If gen = "M" or gen = "F" or gen = "O" or gen = "m" or gen = "f" or gen = "o"
+                Assign genControl = "not"
+            Else
+                Output "Respuesta invalida"
+                Assign genControl = "yes"
+            End
+        End
+        If gen = "M" or gen = "m"
+            Assign contM = contM + 1
+        Else
+            If gen = "F" or gen = "f"
+                Assign contF = contF + 1
+            Else
+                Assign contO = contO + 1
+            End
+        End
+        Output "Ingrese su salario"
+        Input sal
+        While age <0 or age >150
+            Output "Porfavor dijite su año de nacimiento: "
+            Input aaaa
+            Assign age = currentyear - aaaa
+            If age >0 and age <150
+            Else
+                Output "Edad invalida"
+            End
+        End
+        Assign contEmpleados = contEmpleados + 1
+        Assign sumaSalarios = sumaSalarios + sal
+        Assign sumaEdades = sumaEdades + age
+        Output "su edad es de: "& age
+        Output "Usuario registrado con exito"
+        Output "Desea agregar otro usuario"
+        Output "Seleccione: "
+        Output "SI (S/s)"
+        Output "NO (N/n)"
+        Input new
+        If new="S" or new="s" or new="N" or new="n"
+            If new = "S" or new = "s"
+                Assign new = "s"
+            Else
+                Assign new = "not"
+            End
+        Else
+            Assign new = "yes"
+            While new = "yes"
+                Output "Respuesta invalida"
+                Output "Porfavor digite nuevamente su respuesta (S/N)"
+                Output "Desea agregar otro usuario"
+                Output "SI (S/s)"
+                Output "NO (N/n)"
+                Input new2
+                If new2 = "s" or new2 = "S" or new2 = "N" or new2 = "n"
+                    If new2 = "S" or new2 = "s"
+                        Assign new = "s"
+                        Assign new2 = "not"
+                    Else
+                        Assign new = "not"
+                        Assign new2 = "not"
+                    End
+                Else
+                    Assign new2 = "yes"
+                End
+            End
+        End
+    End
+    If contEmpleados > 0
+        Assign promEdades = sumaEdades / contEmpleados
+    Else
+        Assign promEdades = 0
+    End
+    Output "#####REPORTE#####"
+    Output "Empleados Registrados: " & contEmpleados
+    Output "Total Genero Masculino: " & contM
+    Output "Total Genero Femenino: " & contF
+    Output "Total Genero Otro: " & contO
+    Output "Total Salarios a Pagar: " & sumaSalarios
+    Output "Promedio de Edades: " & promEdades
+End

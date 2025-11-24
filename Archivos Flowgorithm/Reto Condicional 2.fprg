@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Reto Condicional 2"/>
+        <attribute name="authors" value="MT-110825"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-21 09:57:54 p.&#160;m."/>
+        <attribute name="created" value="TVQtMTEwODI1O0RFU0tUT1AtRlBMSEVMRTsyMDI1LTExLTIxOzA4OjI3OjA2IGEuwqBtLjszMTg4"/>
+        <attribute name="edited" value="TVQtMTEwODI1O0RFU0tUT1AtRlBMSEVMRTsyMDI1LTExLTIxOzA5OjU3OjU0IHAuwqBtLjszOzMzMjA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Num" type="Real" array="False" size=""/>
+            <declare name="Paroimpar" type="String" array="False" size=""/>
+            <output expression="&quot;please enter number positive or negative&quot;" newline="True"/>
+            <input variable="Num"/>
+            <if expression="abs(Num) % 2 = 0">
+                <then>
+                    <assign variable="Paroimpar" expression="&quot;even&quot;"/>
+                    <output expression="&quot;the number is: &quot; &amp; Paroimpar" newline="True"/>
+                </then>
+                <else>
+                    <assign variable="Paroimpar" expression="&quot;odd&quot;"/>
+                    <output expression="&quot;the number is: &quot; &amp; Paroimpar" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

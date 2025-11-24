@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="reto_condicional1"/>
+        <attribute name="authors" value="claudia"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-21 10:28:02 p.&#160;m."/>
+        <attribute name="created" value="Y2xhdWRpYTtERVNLVE9QLU45SlMzOE87MjAyNS0xMS0xNTsxMDo0NToyNSBhLiBtLjszMjM1"/>
+        <attribute name="edited" value="Y2xhdWRpYTtERVNLVE9QLU45SlMzOE87MjAyNS0xMS0xNTswOToyNTozMiBwLiBtLjsyOzMzNjM="/>
+        <attribute name="edited" value="TVQtMTEwODI1O0RFU0tUT1AtRlBMSEVMRTsyMDI1LTExLTIxOzEwOjI4OjAyIHAuwqBtLjsyOzMzMDI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Num" type="Real" array="False" size=""/>
+            <output expression="&quot;please enter number: &quot;" newline="True"/>
+            <input variable="Num"/>
+            <if expression="Num &gt; 0">
+                <then>
+                    <if expression="Num%2=0">
+                        <then>
+                            <output expression="&quot;The first number positive  &quot; &amp; Num &amp; &quot; it's even&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;The first number positive  &quot; &amp; Num &amp; &quot; It's odd&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="-(Num)%2=0">
+                        <then>
+                            <output expression="&quot;The first number negative  &quot;  &amp; Num &amp; &quot; it's even&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;The first number negative  &quot; &amp; Num &amp; &quot; It's odd&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

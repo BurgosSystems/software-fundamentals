@@ -1,0 +1,180 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="examen final"/>
+        <attribute name="authors" value="MT-110825"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-23 09:40:50 a.&#160;m."/>
+        <attribute name="created" value="TVQtMTEwODI1O0JVUkdPUzsyMDI1LTExLTIyOzAzOjEwOjM5IHAuwqBtLjsyNTY4"/>
+        <attribute name="edited" value="TVQtMTEwODI1O0JVUkdPUzsyMDI1LTExLTIzOzA5OjQwOjUwIGEuwqBtLjs2OzI2Njk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nom" type="String" array="False" size=""/>
+            <declare name="ema" type="String" array="False" size=""/>
+            <declare name="num" type="Integer" array="False" size=""/>
+            <declare name="gen" type="String" array="False" size=""/>
+            <declare name="sal" type="Integer" array="False" size=""/>
+            <declare name="aaaa" type="Integer" array="False" size=""/>
+            <declare name="new" type="String" array="False" size=""/>
+            <declare name="new2" type="String" array="False" size=""/>
+            <declare name="h" type="String" array="False" size=""/>
+            <declare name="res" type="String" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="errorNom" type="Integer" array="False" size=""/>
+            <declare name="errorNum" type="Integer" array="False" size=""/>
+            <declare name="caracter" type="String" array="False" size=""/>
+            <declare name="currentyear" type="Integer" array="False" size=""/>
+            <declare name="age" type="Integer" array="False" size=""/>
+            <assign variable="aaaa" expression="0"/>
+            <assign variable="currentyear" expression="2025"/>
+            <assign variable="age" expression="-1"/>
+            <assign variable="new" expression="&quot;s&quot;"/>
+            <assign variable="gen" expression="&quot;yes&quot;"/>
+            <declare name="nombreValido" type="Boolean" array="False" size=""/>
+            <declare name="numValido" type="Boolean" array="False" size=""/>
+            <declare name="sumaEmple" type="Integer" array="False" size=""/>
+            <assign variable="sumaEmple" expression="0"/>
+            <declare name="ch" type="String" array="False" size=""/>
+            <declare name="sumaGen" type="Integer" array="False" size=""/>
+            <declare name="genSum" type="Integer" array="False" size=""/>
+            <declare name="tama&#241;o" type="Integer" array="False" size=""/>
+            <declare name="contEmpleados" type="Integer" array="False" size=""/>
+            <declare name="contM" type="Integer" array="False" size=""/>
+            <declare name="contF" type="Integer" array="False" size=""/>
+            <declare name="contO" type="Integer" array="False" size=""/>
+            <declare name="sumaSalarios" type="Integer" array="False" size=""/>
+            <declare name="sumaEdades" type="Integer" array="False" size=""/>
+            <declare name="edad" type="Integer" array="False" size=""/>
+            <declare name="promEdades" type="Real" array="False" size=""/>
+            <declare name="genControl" type="String" array="False" size=""/>
+            <declare name="nomControl" type="String" array="False" size=""/>
+            <assign variable="contEmpleados" expression="0"/>
+            <assign variable="contM" expression="0"/>
+            <assign variable="contF" expression="0"/>
+            <assign variable="contO" expression="0"/>
+            <assign variable="sumaSalarios" expression="0"/>
+            <assign variable="sumaEdades" expression="0"/>
+            <while expression="new = &quot;S&quot; or new = &quot;s&quot;">
+                <assign variable="age" expression="-1"/>
+                <output expression="&quot;Porfavor digite su nombre completo&quot;" newline="True"/>
+                <input variable="nom"/>
+                <output expression="&quot;Ingrese su correo electronico&quot;" newline="True"/>
+                <input variable="ema"/>
+                <output expression="&quot;Ingrese su numero telefonico&quot;" newline="True"/>
+                <input variable="num"/>
+                <assign variable="genControl" expression="&quot;yes&quot;"/>
+                <while expression="genControl = &quot;yes&quot;">
+                    <output expression="&quot;Ingrese su genero &quot;" newline="True"/>
+                    <output expression="&quot;Masculino (M/m)&quot;" newline="True"/>
+                    <output expression="&quot;Femenino (F/f)&quot;" newline="True"/>
+                    <output expression="&quot;Otro (O/o)&quot;" newline="True"/>
+                    <input variable="gen"/>
+                    <if expression="gen = &quot;M&quot; or gen = &quot;F&quot; or gen = &quot;O&quot; or gen = &quot;m&quot; or gen = &quot;f&quot; or gen = &quot;o&quot;">
+                        <then>
+                            <assign variable="genControl" expression="&quot;not&quot;"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Respuesta invalida&quot;" newline="True"/>
+                            <assign variable="genControl" expression="&quot;yes&quot;"/>
+                        </else>
+                    </if>
+                </while>
+                <if expression="gen = &quot;M&quot; or gen = &quot;m&quot;">
+                    <then>
+                        <assign variable="contM" expression="contM + 1"/>
+                    </then>
+                    <else>
+                        <if expression="gen = &quot;F&quot; or gen = &quot;f&quot;">
+                            <then>
+                                <assign variable="contF" expression="contF + 1"/>
+                            </then>
+                            <else>
+                                <assign variable="contO" expression="contO + 1"/>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <output expression="&quot;Ingrese su salario&quot;" newline="True"/>
+                <input variable="sal"/>
+                <while expression="age &lt;0 or age &gt;150">
+                    <output expression="&quot;Porfavor dijite su a&#241;o de nacimiento: &quot;" newline="True"/>
+                    <input variable="aaaa"/>
+                    <assign variable="age" expression="currentyear - aaaa"/>
+                    <if expression="age &gt;0 and age &lt;150">
+                        <then/>
+                        <else>
+                            <output expression="&quot;Edad invalida&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </while>
+                <assign variable="contEmpleados" expression="contEmpleados + 1"/>
+                <assign variable="sumaSalarios" expression="sumaSalarios + sal"/>
+                <assign variable="sumaEdades" expression="sumaEdades + age"/>
+                <output expression="&quot;su edad es de: &quot;&amp; age" newline="True"/>
+                <output expression="&quot;Usuario registrado con exito&quot;" newline="True"/>
+                <output expression="&quot;Desea agregar otro usuario&quot;" newline="True"/>
+                <output expression="&quot;Seleccione: &quot;" newline="True"/>
+                <output expression="&quot;SI (S/s)&quot;" newline="True"/>
+                <output expression="&quot;NO (N/n)&quot;" newline="True"/>
+                <input variable="new"/>
+                <if expression="new=&quot;S&quot; or new=&quot;s&quot; or new=&quot;N&quot; or new=&quot;n&quot;">
+                    <then>
+                        <if expression="new = &quot;S&quot; or new = &quot;s&quot;">
+                            <then>
+                                <assign variable="new" expression="&quot;s&quot;"/>
+                            </then>
+                            <else>
+                                <assign variable="new" expression="&quot;not&quot;"/>
+                            </else>
+                        </if>
+                    </then>
+                    <else>
+                        <assign variable="new" expression="&quot;yes&quot;"/>
+                        <while expression="new = &quot;yes&quot;">
+                            <output expression="&quot;Respuesta invalida&quot;" newline="True"/>
+                            <output expression="&quot;Porfavor digite nuevamente su respuesta (S/N)&quot;" newline="True"/>
+                            <output expression="&quot;Desea agregar otro usuario&quot;" newline="True"/>
+                            <output expression="&quot;SI (S/s)&quot;" newline="True"/>
+                            <output expression="&quot;NO (N/n)&quot;" newline="True"/>
+                            <input variable="new2"/>
+                            <if expression="new2 = &quot;s&quot; or new2 = &quot;S&quot; or new2 = &quot;N&quot; or new2 = &quot;n&quot;">
+                                <then>
+                                    <if expression="new2 = &quot;S&quot; or new2 = &quot;s&quot;">
+                                        <then>
+                                            <assign variable="new" expression="&quot;s&quot;"/>
+                                            <assign variable="new2" expression="&quot;not&quot;"/>
+                                        </then>
+                                        <else>
+                                            <assign variable="new" expression="&quot;not&quot;"/>
+                                            <assign variable="new2" expression="&quot;not&quot;"/>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <assign variable="new2" expression="&quot;yes&quot;"/>
+                                </else>
+                            </if>
+                        </while>
+                    </else>
+                </if>
+            </while>
+            <if expression="contEmpleados &gt; 0">
+                <then>
+                    <assign variable="promEdades" expression="sumaEdades / contEmpleados"/>
+                </then>
+                <else>
+                    <assign variable="promEdades" expression="0"/>
+                </else>
+            </if>
+            <output expression="&quot;#####REPORTE#####&quot;" newline="True"/>
+            <output expression="&quot;Empleados Registrados: &quot; &amp; contEmpleados" newline="True"/>
+            <output expression="&quot;Total Genero Masculino: &quot; &amp; contM" newline="True"/>
+            <output expression="&quot;Total Genero Femenino: &quot; &amp; contF" newline="True"/>
+            <output expression="&quot;Total Genero Otro: &quot; &amp; contO" newline="True"/>
+            <output expression="&quot;Total Salarios a Pagar: &quot; &amp; sumaSalarios" newline="True"/>
+            <output expression="&quot;Promedio de Edades: &quot; &amp; promEdades" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

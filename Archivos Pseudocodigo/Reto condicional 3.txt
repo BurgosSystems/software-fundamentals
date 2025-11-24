@@ -1,0 +1,19 @@
+Function Main
+    Declare Real Num
+
+    Output "please enter number: "
+    Input Num
+    If Num > 0
+        If Num%2=0
+            Output "The first number positive  " & Num & " it's even"
+        Else
+            Output "The first number positive  " & Num & " It's odd"
+        End
+    Else
+        If -(Num)%2=0
+            Output "The first number negative  "  & Num & " it's even"
+        Else
+            Output "The first number negative  " & Num & " It's odd"
+        End
+    End
+End

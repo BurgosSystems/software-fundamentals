@@ -1,0 +1,31 @@
+﻿Function Main
+    Output "Lanzando los dados"
+    Declare Entero dado1
+    Declare Entero dado2
+    Declare Cadena Paroimpar1
+    Declare Cadena Paroimpar2
+
+    Assign dado1 = Random(6)+1
+    Assign dado2 = Random(6)+1
+    Output "Dado1:"& dado1
+    If dado1 % 2 == 0
+        Assign Paroimpar1 = "Par"
+        Output "El dado 1 es: " & Paroimpar1
+    Demás
+        Assign Paroimpar1 = "Impar"
+        Output "El dado 1 es: " & Paroimpar1
+    End
+    Output "Dado2:"& dado2
+    If dado2 % 2 == 0
+        Assign Paroimpar2 = "Par"
+        Output "El dado 2 es: " & Paroimpar2
+    Demás
+        Assign Paroimpar2 = "Impar"
+        Output "El dado 2 es: " & Paroimpar2
+    End
+    If dado1 == dado2
+        Output "YOU WIN"
+    Demás
+        Output "GAME OVER"
+    End
+End

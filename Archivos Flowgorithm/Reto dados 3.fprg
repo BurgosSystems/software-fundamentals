@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="reto 2"/>
+        <attribute name="authors" value="MT-110825"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-21 07:11:25 p.&#160;m."/>
+        <attribute name="created" value="TVQtMTEwODI1O0RFU0tUT1AtRlBMSEVMRTsyMDI1LTExLTIxOzA2OjMzOjU0IHAuwqBtLjszMjAx"/>
+        <attribute name="edited" value="TVQtMTEwODI1O0RFU0tUT1AtRlBMSEVMRTsyMDI1LTExLTIxOzA3OjExOjI1IHAuwqBtLjszOzMzMDY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="dado" type="Integer" array="False" size=""/>
+            <declare name="suma" type="Integer" array="False" size=""/>
+            <output expression="&quot;Ingrese el n&#250;mero de lanzamientos: &quot;" newline="True"/>
+            <input variable="n"/>
+            <assign variable="suma" expression="0"/>
+            <for variable="i" start="1" end="n" direction="inc" step="1">
+                <assign variable="dado" expression="random (6)+1"/>
+                <assign variable="suma" expression="suma + dado"/>
+                <output expression="&quot;El dado &quot;&amp; i &amp;&quot; salio: &quot;&amp; dado" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

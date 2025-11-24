@@ -1,0 +1,65 @@
+Function Main
+    ... Declare variables or constants
+    Declare Real num1
+    Declare Real num2
+    Declare Real res
+
+    ... Variable to assign opt value (Between i and 5)
+    Declare Integer opt
+
+    ... Initilize variables or constants
+    Assign num1 = 0
+    Assign num2 = 0
+
+    ... Get number 1
+    Output "Enter value to number 1:"
+    Input num1
+
+    ... Get number 2
+    Output "Enter value to number 2:"
+    Input num2
+
+    ... Print math menu
+    Output "Math menu: [1]. Add - [2]. Subs - [3]. Mult - [4]. Div - [5] All"
+    Output "Press any option [1-5]"
+    Input opt
+    If opt = 1
+        Assign res = num1 + num2
+        Output "Addition:"&res
+    Else
+        If opt = 2
+            Assign res = num1 - num2
+            Output "Substraction:"&res
+        Else
+            If opt = 3
+                Assign res = num1 * num2
+                Output "Multiplication:"&res
+            Else
+                If opt = 4
+                    If num2 = 0
+                        Output "It is not possible to divide by zero"
+                    Else
+                        Assign res = num1 / num2
+                        Output "Division: "&res
+                    End
+                Else
+                    If opt = 5
+                        If num2 = 0
+                            Output "Add: "& num1 + num2
+                            Output "Subs: "& num1 - num2
+                            Output "Mult: "& num1 * num2
+                            Output "Div: El numero 2 no puede ser "& num2
+                        Else
+                            Output "Add: "& num1 + num2
+                            Output "Subs: "& num1 - num2
+                            Output "Mult: "& num1 * num2
+                            Output "Div: "& num1 / num2
+                        End
+                    Else
+                        Output "Option invalid"
+                    End
+                End
+            End
+        End
+    End
+End

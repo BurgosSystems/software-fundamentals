@@ -1,0 +1,14 @@
+Function Main
+    Declare Real Num
+    Declare String Paroimpar
+
+    Output "please enter number positive or negative"
+    Input Num
+    If abs(Num) % 2 = 0
+        Assign Paroimpar = "even"
+        Output "the number is: " & Paroimpar
+    Else
+        Assign Paroimpar = "odd"
+        Output "the number is: " & Paroimpar
+    End
+End
